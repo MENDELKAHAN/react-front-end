@@ -38,8 +38,11 @@ return(
               {links.map( (item, index)=> 
                   <li key={index}>  <Link  to={ item.url } >{ item.label }</Link>
                     {
+
+
+{/* add class for the drop down parent  <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a> */}
                         (typeof(item.sub) == 'object') ? 
-                            <ul>
+                            <ul className="dropdown-menu">
                             {item.sub.map( (sub_item, sub_index)=> 
                                 <li key={sub_index}><Link  to={ sub_item.url } className='sub_links'>{ sub_item.label }</Link></li>
                             )}

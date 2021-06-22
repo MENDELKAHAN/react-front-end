@@ -1,7 +1,5 @@
 // import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import NavBar from './NavBar';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import HomePage from './pages/HomePage';
