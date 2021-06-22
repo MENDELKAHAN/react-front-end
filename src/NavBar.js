@@ -1,5 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const NavBar = () => {
@@ -16,8 +18,18 @@ const NavBar = () => {
     ];
 
 return(
-    <nav>
-        <ul>
+    <nav className="navbar navbar-default navbar-fixed-top" role="navigation"> 
+      <div className="container">
+         <div className="navbar-header">
+            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="https://new.onlineforu.co.uk/site/"> 
+            <img width="100" src="https://new.onlineforu.co.uk/site/asserts/images/logo.png" alt="logo" /></a> </div>
+            
+            <ul className="nav navbar-nav navbar-right">
+
               {links.map( (item, index)=> 
                   <li>  <Link key={index} to={ item.url } >{ item.label }</Link>
                     {
@@ -36,7 +48,10 @@ return(
                 )}
 
             </ul>
-    </nav>
+         
+ 
+  </div>
+</nav>
 )
 
 }
