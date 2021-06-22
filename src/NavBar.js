@@ -36,7 +36,7 @@ return(
                         (typeof(item.sub) == 'object') ? 
                             <ul>
                             {item.sub.map( (sub_item, sub_index)=> 
-                                <li><Link key={index} to={ sub_item.url } >{ sub_item.label }</Link></li>
+                                <li><Link key={index} to={ sub_item.url } className='sub_links'>{ sub_item.label }</Link></li>
                             )}
                             </ul>
                             :
