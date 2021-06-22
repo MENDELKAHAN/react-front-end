@@ -32,32 +32,30 @@ return(
             <Link className="navbar-brand" to="/"> 
             <img width="100"  src={ require('./images/logo.png').default  } alt="logo" />
             </Link> </div>
-            
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul className="nav navbar-nav navbar-right">
 
               {links.map( (item, index)=> 
-                  <li key={index}>  <Link  to={ item.url } >{ item.label }</Link>
-                    {
-
-
-{/* add class for the drop down parent  <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a> */}
+                  
+                    
                         (typeof(item.sub) == 'object') ? 
-                            <ul className="dropdown-menu">
-                            {item.sub.map( (sub_item, sub_index)=> 
-                                <li key={sub_index}><Link  to={ sub_item.url } className='sub_links'>{ sub_item.label }</Link></li>
-                            )}
-                            </ul>
-                            :
-                            ''
-                    }
-                  
-                  
-                  </li>
+                            <li key={index} className="dropdown">  
+                                <Link className="dropdown-toggle" data-toggle="dropdown" to={ item.url } >{ item.label }<b className="caret"></b>
+                                </Link>
+
+                                <ul className="dropdown-menu">
+                                    {item.sub.map( (sub_item, sub_index)=> 
+                                        <li  key={sub_index}><Link  to={ sub_item.url } className='sub_links'>{ sub_item.label }</Link></li>
+                                    )}
+                                </ul>
+                                </li>
+                                :
+                                <li key={index}>  <Link  to={ item.url } >{ item.label }</Link></li>
+                                     
                 )}
 
             </ul>
-         
- 
+  </div>
   </div>
 </nav>
 )

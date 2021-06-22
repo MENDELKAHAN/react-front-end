@@ -115,6 +115,7 @@ p {
 .navbar .nav {
 	padding:12px;
 	background: #fffaf3;
+	display: inline-block; /* added for reacrt */
 }
 .navbar .btn, .navbar .btn-group {
 	margin-top:0;
