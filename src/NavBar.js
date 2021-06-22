@@ -25,8 +25,9 @@ return(
                 <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
                 <span class="icon-bar"></span> <span class="icon-bar"></span> 
             </button>
-            <a class="navbar-brand" href="https://new.onlineforu.co.uk/site/"> 
-            <img width="100" src="https://new.onlineforu.co.uk/site/asserts/images/logo.png" alt="logo" /></a> </div>
+            <Link class="navbar-brand" to="/"> 
+            <img width="100"  src={ require('./images/logo.png').default  } alt="logo" />
+            </Link> </div>
             
             <ul className="nav navbar-nav navbar-right">
 
