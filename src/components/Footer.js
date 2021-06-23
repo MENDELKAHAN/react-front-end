@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Footer = () => {
 
@@ -85,8 +86,8 @@ const Footer = () => {
           <div className="col-sm-4 col-md-2">
             <p>Contact Us</p>
             <ul>
-              <li><a href={`tel:${data.tel[0].info_value}`} target="_blank" rel="noopener noreferrer">{`mailto:${data.tel[0].info_value}`}</a></li>
-              <li><a href={`mailto:${data.email[0].info_value}`} target="_blank" rel="noopener noreferrer">{`mailto:${data.email[0].info_name}`}</a></li>
+              <li><a href={`tel:${data.tel[0].info_value}`} target="_blank" rel="noopener noreferrer">{data.tel[0].info_value}</a></li>
+              <li><a href={`mailto:${data.email[0].info_value}`} target="_blank" rel="noopener noreferrer">{data.email[0].info_name}</a></li>
             </ul>
           </div>
           <div className="col-sm-4 col-md-2">
@@ -94,7 +95,7 @@ const Footer = () => {
             <ul>
 
               {data.social_media.map( (social_media_data, index)=> (
-                  <li><a href={social_media_data.social_media_link} target="_blank" >Follow on {social_media_data.social_media_name}</a></li>
+                  <li key={index}><a href={social_media_data.social_media_link} target="_blank" >Follow on {social_media_data.social_media_name}</a></li>
               ))}
 
             </ul>
@@ -104,7 +105,7 @@ const Footer = () => {
             <p>Links</p>
             <ul>
               {data.footer_nav.map( (footer_nav_data, index)=> (
-                  <li><a href={footer_nav_data.nav_links_url}>{footer_nav_data.nav_links_name}</a></li>
+                  <li key={index}><Link to={footer_nav_data.nav_links_url}>{footer_nav_data.nav_links_name}</Link></li>
                   ))}
               
             </ul>
@@ -130,7 +131,7 @@ const Footer = () => {
 
 
 
-      {/* <div className="modal fade" id="terms_model" tabindex="-1" role="dialog" aria-labelledby="terms_model" aria-hidden="true">
+       <div className="modal fade" id="terms_model" tabindex="-1" role="dialog" aria-labelledby="terms_model" aria-hidden="true">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
       <div className="modal-header">
@@ -143,7 +144,7 @@ const Footer = () => {
       
     </div>
   </div>
-</div> */}
+</div> 
 
       </>
 
