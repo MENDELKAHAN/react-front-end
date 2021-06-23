@@ -40,7 +40,8 @@ return(
                     
                         (typeof(item.sub) == 'object') ? 
                             <li key={index} className="dropdown">  
-                                <Link className="dropdown-toggle" data-toggle="dropdown" to={ item.url } >{ item.label }<b className="caret"></b>
+                                <Link className="dropdown-toggle" data-toggle="dropdown" to={ item.url } >{ item.label }
+                                {/* <b className="caret"></b> */}
                                 </Link>
 
                                 <ul className="dropdown-menu">
