@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       
       
       </header>
+
+      <Footer/>
     </div>
   );
 }
