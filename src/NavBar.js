@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/font-awesome.css';
 import './css/bootstrap.min.css';
-import './css/Hosting.css';
+import './css/hosting.css';
 import './css/flexslider.css';
 
 
@@ -32,7 +32,7 @@ return(
             <Link className="navbar-brand" to="/"> 
             <img width="100"  src={ require('./images/logo.png').default  } alt="logo" />
             </Link> </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div className="collapse navbar-collapse navbar-ex1-collapse">
             <ul className="nav navbar-nav navbar-right">
 
               {links.map( (item, index)=> 

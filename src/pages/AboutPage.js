@@ -5,7 +5,7 @@ import AboutUsHome from "../components/AboutUsHome";
 const AboutPage = () => {
 return(
     
-    <div classNameName="container">  
+    <div className="container">  
   <div className="row PageHead">
     <div className="col-md-12">
       <h1>About Us</h1>
