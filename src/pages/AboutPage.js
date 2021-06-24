@@ -3,10 +3,15 @@ import React from "react";
 const AboutPage = () => {
 return(
     
-    <div className="container">  
+  <div className="container"> 
+  
+
+  
   <div className="row PageHead">
+
     <div className="col-md-12">
       <h1>About Us</h1>
+      
     </div>
   </div>
   <div className="row blog">
@@ -19,10 +24,13 @@ return(
        <p>Althogh we still do some some of that, our main foucus is on developing and hosting websites and building applications.</p>
 
       </div>
-      </div>
-    </div>
-  </div>
     
+
+      </div>
+     
+    </div>
+     
+  </div>
 )
 
 }
