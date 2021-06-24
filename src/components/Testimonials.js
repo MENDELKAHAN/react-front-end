@@ -72,7 +72,7 @@ const Testimonials = () => {
        
                                 {testimonials.map( (data, index)=> (
        
-                                    <li>
+                                    <li key={data.testimonials_id}>
                                         <div className="hero-unit">
                                 
                                             <h3>{data.testimonials_description}</h3>

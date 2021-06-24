@@ -60,6 +60,9 @@ p {
 
 .navbar-header {
 	min-height:80px;
+	position: fixed;
+	top: 0;
+	width: 100%;;
 }
 .navbar-default .navbar-toggle {
 	border-color: #808080;
