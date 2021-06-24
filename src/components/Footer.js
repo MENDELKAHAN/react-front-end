@@ -49,7 +49,7 @@ const Footer = () => {
     nav_links_parent: null,
     nav_links_active: "1",
     nav_links_position: "1",
-    nav_links_url: ""
+    nav_links_url: "/"
     },
     {
     nav_links_id: "1",
@@ -86,8 +86,8 @@ const Footer = () => {
           <div className="col-sm-4 col-md-2">
             <p>Contact Us</p>
             <ul>
-              <li><a href={`tel:${data.tel[0].info_value}`} target="_blank" rel="noopener noreferrer">{data.tel[0].info_value}</a></li>
-              <li><a href={`mailto:${data.email[0].info_value}`} target="_blank" rel="noopener noreferrer">{data.email[0].info_name}</a></li>
+              <li><a href={`tel:${data.tel[0].info_value}`} >{data.tel[0].info_value}</a></li>
+              <li><a href={`mailto:${data.email[0].info_value}`} >{data.email[0].info_name}</a></li>
             </ul>
           </div>
           <div className="col-sm-4 col-md-2">
@@ -95,7 +95,7 @@ const Footer = () => {
             <ul>
 
               {data.social_media.map( (social_media_data, index)=> (
-                  <li key={index}><a href={social_media_data.social_media_link} target="_blank" >Follow on {social_media_data.social_media_name}</a></li>
+                  <li key={index}><a href={social_media_data.social_media_link} target="_blank" rel="noreferrer">Follow on {social_media_data.social_media_name}</a></li>
               ))}
 
             </ul>
@@ -113,7 +113,8 @@ const Footer = () => {
           <div className="col-sm-8 col-md-4">
             <p>LEGAL TERMS</p>
             <ul>
-              <li><a href="#" data-toggle="modal" data-target="#terms_model">Privacy Policy</a></li>
+              {/* privCY POP LINK */}
+              <li><button data-toggle="modal" data-target="#terms_model">Privacy Policy</button></li>
             </ul>
           </div>
           <div className="col-sm-4 col-md-2">
@@ -131,7 +132,7 @@ const Footer = () => {
 
 
 
-       <div className="modal fade" id="terms_model" tabindex="-1" role="dialog" aria-labelledby="terms_model" aria-hidden="true">
+      {/* <div className="modal fade" id="terms_model" tabindex="-1" role="dialog" aria-labelledby="terms_model" aria-hidden="true">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
       <div className="modal-header">
@@ -144,7 +145,7 @@ const Footer = () => {
       
     </div>
   </div>
-</div> 
+</div> */}
 
       </>
 
