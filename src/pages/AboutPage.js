@@ -1,8 +1,9 @@
 import React from "react";
+import Projects from '../components/Projects';
 
 const AboutPage = () => {
 return(
-    
+    <>
   <div className="container"> 
   
 
@@ -31,6 +32,8 @@ return(
     </div>
      
   </div>
+  <Projects />
+  </>
 )
 
 }

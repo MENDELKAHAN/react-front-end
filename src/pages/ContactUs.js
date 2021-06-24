@@ -32,7 +32,7 @@ const ContactUs = () => {
             </div>
             <div className="row">
               <div className="col-md-12 mapwrap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.712020929573!2d-0.21311758407314826!3d51.57351261368781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761094bb6b9a43%3A0x2df98b6b61c245f6!2s42+Hamilton+Rd%2C+London+NW11+9EJ!5e0!3m2!1sen!2suk!4v1561483859917!5m2!1sen!2suk" width="100%" height="250" frameborder="0" style={{border:0}}/>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.712020929573!2d-0.21311758407314826!3d51.57351261368781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761094bb6b9a43%3A0x2df98b6b61c245f6!2s42+Hamilton+Rd%2C+London+NW11+9EJ!5e0!3m2!1sen!2suk!4v1561483859917!5m2!1sen!2suk" title="Google maps" width="100%" height="250" frameBorder="0" style={{border:0}}/>
               </div>
             </div>
           </div>
