@@ -10,16 +10,69 @@ import './css/flexslider.css';
 
 const NavBar = () => {
 
-    let links = [
-        {label:"Home", url:"/"},
-        {label:"About", url:"about"},
-        {label:"Services", url:"services", sub: 
-            [
-                {label:"sub 1", url:"sub1"},
-                {label:"sub 2", url:"sub21"}]
+     let links = [
+        {
+        nav_links_id: "2",
+        nav_links_name: "Home",
+        nav_links_parent: null,
+        nav_links_active: "1",
+        nav_links_position: "1",
+        nav_links_url: "",
+        children: [ ]
         },
-        {label:"Contact Us", url:"contact"}
-    ];
+        {
+        nav_links_id: "1",
+        nav_links_name: "About ",
+        nav_links_parent: null,
+        nav_links_active: "1",
+        nav_links_position: "2",
+        nav_links_url: "about",
+        children: [ ]
+        },
+        {
+        nav_links_id: "3",
+        nav_links_name: "Services",
+        nav_links_parent: null,
+        nav_links_active: "1",
+        nav_links_position: "3",
+        nav_links_url: "services",
+        children: [
+        {
+        nav_links_id: "7",
+        nav_links_name: "Site Development",
+        nav_links_parent: "3",
+        nav_links_active: "1",
+        nav_links_position: "1",
+        nav_links_url: "development"
+        },
+        {
+        nav_links_id: "8",
+        nav_links_name: "Hosting",
+        nav_links_parent: "3",
+        nav_links_active: "1",
+        nav_links_position: "2",
+        nav_links_url: "hosting"
+        },
+        {
+        nav_links_id: "9",
+        nav_links_name: "Improvement",
+        nav_links_parent: "3",
+        nav_links_active: "1",
+        nav_links_position: "3",
+        nav_links_url: "improvement"
+        }
+        ]
+        },
+        {
+        nav_links_id: "4",
+        nav_links_name: "Contact Us",
+        nav_links_parent: null,
+        nav_links_active: "1",
+        nav_links_position: "4",
+        nav_links_url: "contact",
+        children: [ ]
+        }
+        ]
 
 return(
     <nav className="navbar navbar-default navbar-fixed-top" role="navigation"> 
@@ -38,20 +91,20 @@ return(
               {links.map( (item, index)=> 
                   
                     
-                        (typeof(item.sub) == 'object') ? 
+                        (typeof(item.children) == 'object' && item.children.length > 0) ? 
                             <li key={index} className="dropdown">  
-                                <Link className="dropdown-toggle" data-toggle="dropdown" to={ item.url } >{ item.label }
+                                <Link className="dropdown-toggle" data-toggle="dropdown" to={ item.nav_links_url } >{ item.nav_links_name }
                                 {/* <b className="caret"></b> */}
                                 </Link>
 
                                 <ul className="dropdown-menu">
-                                    {item.sub.map( (sub_item, sub_index)=> 
-                                        <li  key={sub_index}><Link  to={ sub_item.url } className='sub_links'>{ sub_item.label }</Link></li>
+                                    {item.children.map( (sub_item, sub_index)=> 
+                                        <li  key={sub_index}><Link  to={ sub_item.nav_links_url } className='sub_links'>{ sub_item.nav_links_name }</Link></li>
                                     )}
                                 </ul>
                                 </li>
                                 :
-                                <li key={index}>  <Link  to={ item.url } >{ item.label }</Link></li>
+                                <li key={index}>  <Link  to={ item.nav_links_url } >{ item.nav_links_name }</Link></li>
                                      
                 )}
 
