@@ -1,20 +1,18 @@
 
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import $ from 'jquery';
+import '../js/modernizr';
 
-const Testimonials = () => {
-    
-    // componentDidMount(
+class Testimonials extends Component {
+
 
     
-    //     getelementsbyclassname('flexslider').flexslider({
-    //        animation: "slide",
-    //    useCSS: Modernizr.touch
-    //      })
-    
-    // );
+    constructor(props) {
+        super(props);
 
-    const testimonials = [
+    this.state = {
+      testimonials : [
         {
         testimonials_id: "1",
         testimonials_position: "Director",
@@ -63,9 +61,22 @@ const Testimonials = () => {
         image_folder: null,
         image_name: null
         }
-    ];
+    ]
+}
+    };
 
-    return(
+    componentDidMount() {
+
+    $('.flexslider').flexslider({
+        animation: "slide",
+    useCSS: Modernizr.touch
+      });
+    }
+
+    render() {
+        console.log( this.state.testimonials)
+      
+       return (
         <div className="block free_quotes bg-1 bottom-sm">
             <div className="container testimonials"> 
                 <div>
@@ -74,14 +85,14 @@ const Testimonials = () => {
                             <div className="flexslider">
                                 <ul className="slides">
        
-                                    {testimonials.map( (data, index)=> 
+                                    {this.state.testimonials.map( (data, index)=> 
         
                                         <li key={data.testimonials_id}>
                                             <div className="hero-unit">
                                                 <h3>{data.testimonials_description}</h3>
                                                 <p>{data.testimonials_name} <br/> <span>{data.testimonials_position} </span> {data.testimonials_company}</p>
                                                 {(data.image_folder !== null ? 
-                                                (<img width="150" src={ require(`../images/${data.image_folder}/${data.image_name}`).default }  />) 
+                                                (<img width="150" src={ require(`../images/${data.image_folder}/${data.image_name}`).default } alt="" />) 
                                                 : (<div></div>) 
                                                 )}
                                             </div>
@@ -94,6 +105,7 @@ const Testimonials = () => {
             </div>
         </div>
     )
+                                                }
 }
 
 export default Testimonials;
