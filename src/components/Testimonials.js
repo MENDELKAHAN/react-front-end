@@ -1,8 +1,9 @@
 
 
 import React, { Component } from 'react';
-import $ from 'jquery';
-import '../js/modernizr';
+import Carousel from 'react-elastic-carousel';
+
+
 
 class Testimonials extends Component {
 
@@ -65,16 +66,8 @@ class Testimonials extends Component {
 }
     };
 
-    componentDidMount() {
-
-    $('.flexslider').flexslider({
-        animation: "slide",
-    useCSS: Modernizr.touch
-      });
-    }
-
+ 
     render() {
-        console.log( this.state.testimonials)
       
        return (
         <div className="block free_quotes bg-1 bottom-sm">
@@ -84,6 +77,8 @@ class Testimonials extends Component {
                         <div className="container"> 
                             <div className="flexslider">
                                 <ul className="slides">
+                                <Carousel>
+
        
                                     {this.state.testimonials.map( (data, index)=> 
         
@@ -98,6 +93,8 @@ class Testimonials extends Component {
                                             </div>
                                         </li>
                                     )}
+                                                </Carousel>
+
                             </ul>
                         </div>
                     </div>

@@ -69,6 +69,8 @@ p {
 }
 .navbar-toggle {
 	margin-top: 20px;
+	position: absolute;
+    right: 50px;
 }
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
 	max-height: 370px;
