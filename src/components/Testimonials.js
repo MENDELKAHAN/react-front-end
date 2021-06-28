@@ -1,9 +1,18 @@
 
 
-import React from "react";
+import React, { Component } from "react";
 
 const Testimonials = () => {
+    
+    // componentDidMount(
 
+    
+    //     getelementsbyclassname('flexslider').flexslider({
+    //        animation: "slide",
+    //    useCSS: Modernizr.touch
+    //      })
+    
+    // );
 
     const testimonials = [
         {
@@ -54,45 +63,36 @@ const Testimonials = () => {
         image_folder: null,
         image_name: null
         }
-        ];
-
-
-
-
+    ];
 
     return(
-      
         <div className="block free_quotes bg-1 bottom-sm">
             <div className="container testimonials"> 
                 <div>
                     <h1>What our Customers say</h1>
                         <div className="container"> 
                             <div className="flexslider">
-                            <ul className="slides">
+                                <ul className="slides">
        
-                                {testimonials.map( (data, index)=> (
-       
-                                    <li key={data.testimonials_id}>
-                                        <div className="hero-unit">
-                                
-                                            <h3>{data.testimonials_description}</h3>
-                                            <p>{data.testimonials_name} <br/> <span>{data.testimonials_position} </span> {data.testimonials_company}</p>
-                                            if (data.image_folder !== null){
-                                               //    <img width="150" src={ require(`../images/${data.image_folder}/${data.image_name}`).default }  />
-                                            })
-                                            
-                                                                                       
-
-                                        </div>
-                                    </li>
-                                ))}
+                                    {testimonials.map( (data, index)=> 
+        
+                                        <li key={data.testimonials_id}>
+                                            <div className="hero-unit">
+                                                <h3>{data.testimonials_description}</h3>
+                                                <p>{data.testimonials_name} <br/> <span>{data.testimonials_position} </span> {data.testimonials_company}</p>
+                                                {(data.image_folder !== null ? 
+                                                (<img width="150" src={ require(`../images/${data.image_folder}/${data.image_name}`).default }  />) 
+                                                : (<div></div>) 
+                                                )}
+                                            </div>
+                                        </li>
+                                    )}
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     )
 }
 

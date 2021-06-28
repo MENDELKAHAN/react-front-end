@@ -6,7 +6,10 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/Footer';
+import Development from './pages/services/Development';
 import ScrollToTop from './components/ScrollToTop';
+import Improvement from './pages/services/Improvement';
+import Hosting from './pages/services/Hosting';
 
 function App() {
   return (
@@ -19,6 +22,15 @@ function App() {
         <Route path="/" component={HomePage} exact/>
         <Route path="/about" component={AboutPage}/>
         <Route path="/contact" component={ContactUs}/>
+
+        <Route path="/development" component={Development}/>
+        <Route path="/improvement" component={Improvement}/>
+        <Route path="/hosting" component={Hosting}/>
+        
+
+        
+
+  
         
       {/* </header> */}
 
