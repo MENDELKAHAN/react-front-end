@@ -75,6 +75,25 @@ p {
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
 	max-height: 370px;
 }
+
+@media (max-width:767px){
+	.navbar .nav {
+
+	
+	}
+	
+	.navbar-collapse.in{
+		padding: 12px;
+		background: #fffaf3;
+		display: inline-block;
+		width: 100%;
+		padding-left: 0;
+		margin: 0;
+		top: 105px;
+		position: absolute;
+		left: 0;
+	}
+}
 .jumbotron {
 	position: relative;
 	color: #fff;

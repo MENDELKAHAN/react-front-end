@@ -11,7 +11,7 @@
     <meta property="og:image" content="https://new.onlineforu.co.uk/site/asserts/images/logo.png">
     
     <!-- Bootstrap -->
-    <link href="https://new.onlineforu.co.uk/site/asserts/css/bootstrap.min.css   " rel="stylesheet">
+    <link href="https://new.onlineforu.co.uk/site/asserts/css/bootstrap.min.css" rel="stylesheet">
     
     <!--==============GOOGLE FONT - OPEN SANS=================-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -26,18 +26,30 @@
     
  
     
-    <!-- <script src="https://new.onlineforu.co.uk/site/asserts/js/modernizr.js"></script> -->
+    <script src="https://new.onlineforu.co.uk/site/asserts/js/modernizr.js"></script>
     
     <!--===================FLEX SLIDER STARTS=======================-->
     
+    <link rel="stylesheet" href="https://new.onlineforu.co.uk/site/asserts/css/flexslider.css">
     <script src="https://new.onlineforu.co.uk/site/asserts/js/jquery.min.js"></script>
+    <script src="https://new.onlineforu.co.uk/site/asserts/js/jquery.flexslider.js"></script>
 
    
     
     <script src="https://new.onlineforu.co.uk/site/asserts/js/contact_form.js"></script>
     
     
-     
+    <script type="text/javascript">
+      $(window).load(function() {
+         $('.flexslider').flexslider({
+            animation: "slide",
+        useCSS: Modernizr.touch
+          });
+      });
+    </script>
+    
+    <!--===================FLEX SLIDER ENDS=======================-->
+    
            
     
     </head>
